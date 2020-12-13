@@ -32,10 +32,22 @@ const lightMode = () => {
 
 const switchTheme = (event) => {
   if (event.target.checked) {
+    localStorage.setItem("theme", "dark");
     darkMode();
   } else {
+    localStorage.setItem("theme", "light");
     lightMode();
   }
 };
 
+// Event Listenre
 toggleSwitch.addEventListener("change", switchTheme);
+
+//local storage
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme)
+  document.documentElement.setAttribute("data-theme", currentTheme);
+if (currentTheme === "dark") {
+  toggleSwitch.checked = true;
+  darkMode();
+}
