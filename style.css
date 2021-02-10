@@ -70,6 +70,7 @@ a {
   text-decoration: none;
   border-bottom: 3px solid transparent;
   font-weight: bold;
+  /* font-size: 12px; */
 }
 
 a:hover,
@@ -258,4 +259,49 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+}
+
+@media (max-width: 600px){
+
+.text-box {
+  width: 70%;
+  text-align: justify;
+  background: rgb(0 0 0 / 50%);
+  color: var(--on-primary);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 35px;
+}
+a{
+  font-size:14px
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+h2{
+  font-size: 30px;
+}
+.fab {
+  font-size:40px
+}
+.about-container{
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  padding: 20px 0px
+}
+.image-container{
+  /* margin: 20px 0px; */
+  margin: 15px 0px;
+}
+.butttons{
+  display: flex;
+  flex-direction:column;
+}
+
+button{
+  margin: 7px
+}
+
 }
